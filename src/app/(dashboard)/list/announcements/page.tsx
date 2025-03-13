@@ -4,6 +4,7 @@ import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
 import Link from "next/link";
 import {announcementsData, role} from "@/lib/data";
+import FormModal from "@/components/FormModal";
 
 type Announcement = {
     id: number;
@@ -36,15 +37,11 @@ const AnnouncementsListPage = () => {
             <td className="hidden md:table-cell">{item.date}</td>
             <td>
                 <div className="flex items-center gap-2">
-                    <Link href={`/list/teachers/${item.id}`} className="">
-                        <button className="w-7 h-7 flex items-center justify-center rounded-full bg-dashSky">
-                            <Image src="/edit.png" alt="" width={16} height={16}/>
-                        </button>
-                    </Link>
-                    {role === 'admin' && (
-                        <button className="w-7 h-7 flex items-center justify-center rounded-full bg-dashPurple">
-                            <Image src="/delete.png" alt="" width={16} height={16}/>
-                        </button>
+                    {role === "admin" && (
+                        <>
+                            <FormModal table="announcement" type="update" data={item} />
+                            <FormModal table="announcement" type="delete" id={item.id} />
+                        </>
                     )}
                 </div>
             </td>
@@ -61,11 +58,9 @@ const AnnouncementsListPage = () => {
                     <div className="flex items-center gap-4 self-end ">
                         <button className="w-8 h-8 flex items-center justify-center rounded-full bg-dashYellow"><Image src="/filter.png" alt="" width={14} height={14}/></button>
                         <button className="w-8 h-8 flex items-center justify-center rounded-full bg-dashYellow"><Image src="/sort.png" alt="" width={14} height={14}/></button>
-                        {role === 'admin' &&
-                            (<button className="w-8 h-8 flex items-center justify-center rounded-full bg-dashYellow">
-                                <Image src="/plus.png" alt="" width={14} height={14}/>
-                            </button>)
-                        }
+                        {role === "admin" && (
+                            <FormModal table="announcement" type="create" />
+                        )}
                     </div>
                 </div>
             </div>
