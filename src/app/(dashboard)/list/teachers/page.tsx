@@ -1,3 +1,4 @@
+//Completed the UI design
 import React from 'react'
 import TableSearch from "@/components/TableSearch";
 import Image from "next/image";

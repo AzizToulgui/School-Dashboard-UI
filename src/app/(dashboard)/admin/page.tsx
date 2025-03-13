@@ -1,3 +1,4 @@
+//Completed the UI design
 import AttendanceChart from "@/components/AttendanceChart";
 import CountChart from "@/components/CountChart";
 import FinanceChart from "@/components/FinanceChart";

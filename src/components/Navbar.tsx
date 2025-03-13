@@ -1,3 +1,4 @@
+//Completed the UI design
 import Image from "next/image"
 
 const Navbar = () => {

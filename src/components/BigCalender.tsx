@@ -1,4 +1,5 @@
 "use client";
+//Completed the UI design
 
 import { Calendar, momentLocalizer, View, Views } from "react-big-calendar";
 import moment from "moment";

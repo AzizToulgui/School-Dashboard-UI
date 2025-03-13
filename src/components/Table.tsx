@@ -1,3 +1,6 @@
+//Completed the UI design
+
+
 import React from 'react'
 
 const Table = (

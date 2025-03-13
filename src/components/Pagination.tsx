@@ -1,4 +1,4 @@
-import React from 'react'
+//Completed the UI design
 
 const Pagination = () => {
     return (

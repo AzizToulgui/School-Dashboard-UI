@@ -1,4 +1,5 @@
 "use client";
+//Completed the UI design
 
 import Image from "next/image";
 import { useState } from "react";

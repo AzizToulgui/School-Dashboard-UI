@@ -1,4 +1,5 @@
 "use client";
+//Completed the UI design
 
 import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
 import Image from "next/image";

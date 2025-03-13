@@ -1,4 +1,5 @@
 "use client";
+//Completed the UI design
 
 import { RadialBarChart, RadialBar, Legend, ResponsiveContainer } from 'recharts';
 import Image from "next/image";
