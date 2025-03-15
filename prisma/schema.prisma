@@ -179,4 +179,5 @@ enum Day {
   WEDNESDAY
   THURSDAY
   FRIDAY
+  SUNDAY
 }
