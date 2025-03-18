@@ -1,8 +1,6 @@
 "use client"
 
-import type React from "react"
-
-import { useState } from "react"
+import React, { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
@@ -24,7 +22,7 @@ export default function LoginPage() {
         <div className="bg-white rounded-3xl shadow-lg m-auto w-[90%] overflow-hidden">
           <div className="flex flex-col md:flex-row">
             {/* Left side with illustration */}
-            <div className="p-6 md:w-1/2 relative flex items-center justify-start">
+            <div className="p-6 hidden md:w-1/2 relative md:flex items-center justify-start">
               <Image
                   src="/loginPage.png"
                   alt="login"
@@ -36,7 +34,10 @@ export default function LoginPage() {
             {/* Right side with login form */}
             <div className="p-8 md:w-1/2">
               <div className="max-w-md mx-auto py-8">
-                <h1 className="text-3xl font-bold mb-8">Login</h1>
+                <div className="flex flex-col mb-8">
+                <h1 className="text-3xl font-bold ">Welcome</h1>
+                <p className="text-sm text-gray-500">let us help you with you&apos;r management </p>
+                </div>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
@@ -148,7 +149,7 @@ export default function LoginPage() {
 
                 <p className="mt-8 text-center text-gray-600">
                   Don&apos;t have an account?{" "}
-                  <Link href="#" className="hover:underline" style={{ color: "#CFCEFF" }}>
+                  <Link href="/sign-in" className="hover:underline" style={{ color: "#CFCEFF" }}>
                     Sign Up here
                   </Link>
                 </p>
