@@ -20,28 +20,17 @@ export default function LoginPage() {
   }
 
   return (
-      <div className="min-h-screen w-full flex items-center justify-center bg-dashSky">
-        <div className="bg-white rounded-3xl shadow-lg max-w-4xl w-full overflow-hidden">
+      <div className="min-h-screen w-full flex items-center justify-center">
+        <div className="bg-white rounded-3xl shadow-lg m-auto w-[90%] overflow-hidden">
           <div className="flex flex-col md:flex-row">
             {/* Left side with illustration */}
-            <div className="p-6 md:w-1/2 relative bg-dashSkyLight">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-xl font-bold text-dashPurple" >
-                  Dasssh&apos;s School Dashboard
-                </h2>
-                <button className="text-gray-700">
-                  <X className="h-5 w-5" />
-                </button>
-              </div>
-              <div className="flex justify-center items-center h-full">
-                <Image
-                    src="/placeholder.svg?height=400&width=400"
-                    alt="Login illustration"
-                    width={400}
-                    height={400}
-                    className="max-w-full h-auto"
-                />
-              </div>
+            <div className="p-6 md:w-1/2 relative flex items-center justify-start">
+              <Image
+                  src="/loginPage.png"
+                  alt="login"
+                  layout="fill"
+                  objectFit="center"
+              />
             </div>
 
             {/* Right side with login form */}
@@ -64,7 +53,7 @@ export default function LoginPage() {
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
                           className="w-full pl-10 pr-3 py-2 border border-gray-200 rounded-full focus:outline-none"
-                          placeholder="daniel21fisher@gmail.com"
+                          placeholder="example@gmail.com"
                           style={{ borderColor: "#FAE27C" }}
                       />
                     </div>
@@ -90,7 +79,7 @@ export default function LoginPage() {
                   </div>
 
                   <div className="flex justify-end">
-                    <Link href="#" className="hover:underline" style={{ color: "#FAE27C" }}>
+                    <Link href="#" className="hover:underline text-dashPurple">
                       Forgot Password?
                     </Link>
                   </div>
